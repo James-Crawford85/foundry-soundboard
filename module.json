@@ -3,6 +3,7 @@
   "title": "Simple Soundboard",
   "description": "A small soundboard to play MP3s for players.",
   "version": "1.0.0",
+  "manifest": "https://github.com/James-Crawford85/foundry-soundboard/module.json",
   "compatibility": {
     "minimum": "13",
     "verified": "13"
