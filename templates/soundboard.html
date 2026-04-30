@@ -1,0 +1,29 @@
+{{log categories}}
+
+<div class="soundboard">
+  <div class="global-controls">
+    <label for="global-volume">Master Volume</label>
+    <input type="range" id="global-volume" min="0" max="1" step="0.05" value="0.8">
+    <button id="stop-all" class="stop-button">Stop All</button>
+    <button id="save-favorite" class="fav-button">Save Favorite</button>
+  </div>
+
+<div class="folder">
+  <div class="folder-header" data-folder="favorites">⭐ Favorites</div>
+  <div class="folder-content" data-folder="favorites" style="display:none;">
+    {{#each favorites}}
+      <div class="favorite" data-index="{{@index}}">
+        {{name}}
+        <button class="delete-fav" data-index="{{@index}}">✖</button>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+	<div id="folders">
+  {{#each categories}}
+    {{> folderPartial this}}
+  {{/each}}
+</div>
+
+</div>

@@ -1,0 +1,21 @@
+<div class="folder">
+  <div class="folder-header" data-folder="{{@key}}">
+    <strong>{{@key}}</strong>
+  </div>
+
+  <div class="folder-content" data-folder="{{@key}}" style="display:none;">
+    {{#each this}}
+      {{#if file}}
+        {{!-- File entry: Continuous | Volume | Title --}}
+        <div class="track-row">
+          <button class="loop-button" data-file="{{file}}" title="Toggle loop">⟳</button>
+          <input type="range" class="track-volume" data-file="{{file}}" min="0" max="1" step="0.01" value="1" />
+          <span class="track" data-file="{{file}}">{{name}}</span>
+        </div>
+      {{else}}
+        {{!-- Subfolder recursion --}}
+        {{> folderPartial this}}
+      {{/if}}
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,17 @@
+{
+  "id": "foundry-soundboard",
+  "title": "Simple Soundboard",
+  "description": "A small soundboard to play MP3s for players.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "scripts": ["scripts/soundboard.js"],
+  "styles": ["styles/soundboard.css"],
+  "esmodules": [],
+  "languages": [],
+  "packs": [],
+  "system": [],
+  "dependencies": []
+}
